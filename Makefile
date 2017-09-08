@@ -16,4 +16,8 @@ deps.get:
 ecto.gen.migration:
 	docker-compose run whatsgoingon mix ecto.gen.migration $(data)
 
+ecto.create:
+	docker-compose run whatsgoingon mix ecto.create
 
+ecto.migrate:
+	docker-compose run whatsgoingon mix ecto.migrate
