@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  whatsgoingon:
+    build: .
+    volumes:
+      - .:/opt/:rw
+    networks:
+      - service-grp-net
+
+networks:
+  service-grp-net:
+    external: true
