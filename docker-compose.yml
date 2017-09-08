@@ -3,6 +3,8 @@ version: '2'
 services:
   whatsgoingon:
     build: .
+    ports:
+      - $EXPOSE_IP:4000:8080
     volumes:
       - .:/opt/:rw
     networks:

@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  whatsgoingon:
+    depends_on:
+      - postgres
+    environment:
+      - MIX_ENV=dev
+      - DB_USER=wgo_user
+      - DB_PASSWORD=wgo_password
+      - DB_NAME=wgo_db
+      - DB_HOST=postgres
+    networks:
+      - wgo-net
+
+  postgres:
+    image: postgres:9.6.5
+    environment:
+      - POSTGRES_PASSWORD=wgo_password
+      - POSTGRES_USER=wgo_user
+      - POSTGRES_DB=wgo_db
+    networks:
+      - wgo-net
+
+networks:
+  wgo-net: {}
