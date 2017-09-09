@@ -5,6 +5,7 @@ services:
     depends_on:
       - postgres
     environment:
+      - NEWS_API_KEY=1130a5c7690440d08e57964a62b413b1
       - MIX_ENV=dev
       - DB_USER=wgo_user
       - DB_PASSWORD=wgo_password

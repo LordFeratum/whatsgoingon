@@ -1,11 +1,8 @@
-local.hex:
-	docker-compose run whatsgoingon mix local.hex --force
-
 sh:
 	docker-compose run whatsgoingon sh
 
-up: local.hex
-	docker-compose run whatsgoingon mix phoenix.server
+up:
+	docker-compose up
 
 iex:
 	docker-compose run whatsgoingon iex

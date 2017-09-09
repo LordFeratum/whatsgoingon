@@ -3,8 +3,9 @@ version: '2'
 services:
   whatsgoingon:
     build: .
+    command: mix phoenix.server
     ports:
-      - $EXPOSE_IP:4000:8080
+      - $EXPOSE_IP:4000:4000
     volumes:
       - .:/opt/:rw
     networks:

@@ -2,7 +2,7 @@ defmodule Whatsgoingon.Repo.Migrations.New do
   use Ecto.Migration
 
   def change do
-    create_table(:news) do:
+    create table(:news) do
       add :source, :string
       add :title, :string
       add :corpus, :string

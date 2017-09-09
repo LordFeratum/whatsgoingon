@@ -7,5 +7,10 @@ defmodule Whatsgoingon.Router do
 
   scope "/api", Whatsgoingon do
     pipe_through :api
+
+    get "/news", NewController, :index
+    get "/news/:id", NewController, :show
+    post "/news", NewController, :create
+    delete "/news/:id", NewController, :delete
   end
 end
